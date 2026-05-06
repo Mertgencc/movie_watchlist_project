@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Movie Watchlist</title>
 </head>
 <body>
+
+    <input type="text" id="nameInput" placeholder="Film Adı ...">
+    <input type="text" id="typeInput" placeholder="Film Türü ...">
     
+    <select id="category">
+        <option value="Komedi">Komedi Filmi</option>
+        <option value="Korku">Korku Filmi</option>
+        <option value="Aksiyon">Aksiyon Filmi</option>
+        <option value="Hepsi">Hepsi</option>
+    </select>
+    
+    <button onclick="addFilm()">Film Ekle</button>
+    <ul id="filmList"></ul>
+
+    <script src="/js/main7.js"></script>
 </body>
 </html>
