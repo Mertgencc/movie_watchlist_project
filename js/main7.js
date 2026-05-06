@@ -76,6 +76,8 @@ function renderFilm(){
     const completedFilm = film.filter((item) => item.completed).length;
     const totalFilm = film.length;
 
+    document.getElementById("textFilm").textContent = completedFilm + " / " + totalFilm + " izlendi.";
+
     filteredFilm.forEach(function(item){
         const li = document.createElement("li");
         li.textContent = item.name + " " + item.type + " " + item.category;
