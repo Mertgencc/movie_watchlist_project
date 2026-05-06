@@ -15,3 +15,8 @@ window.onload = function(){
 
     renderFilm();
 }
+
+function generateID(){
+    return Date.now;
+}
+
