@@ -75,7 +75,9 @@ function renderFilm() {
         filteredFilm = film.filter((item) => item.category === selectedCategory);
     }
 
-
+    if(searchText !== " "){
+        filteredFilm = filteredFilm.filter((item) => item.name.toLowerCase().includes(searchText));
+    }
 
     const completedFilm = film.filter((item) => item.completed).length;
     const totalFilm = film.length;
