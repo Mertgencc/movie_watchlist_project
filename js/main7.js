@@ -4,10 +4,10 @@ let editID = null;
 let searchText = "";
 
 function fakeDelay(){
-    return new Promise((resolve) => {
-        setTimeout(() => {
+    return new Promise((resolve) => { // Az sonra yapacağım demek istedik aslında
+        setTimeout(() => { // Süre vereceğiz az sonra
             resolve();
-        }, 500);
+        }, 500); // Burada 0.5 saniye bekleyecek
     });
 }
 
@@ -28,7 +28,7 @@ window.onload = async function () {
         renderFilm();
     }
 
-    await fakeDelay();
+    await fakeDelay(); // Burada çağırdık
 
     renderFilm();
 }
