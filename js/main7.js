@@ -3,7 +3,16 @@ let selectedCategory = "Hepsi";
 let editID = null;
 let searchText = "";
 
-window.onload = function () {
+function fakeDelay(){
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve();
+        }, 500);
+    });
+}
+
+
+window.onload = async function () {
     const data = localStorage.getItem("film");
     if (data) {
         film = JSON.parse(data);
@@ -18,6 +27,8 @@ window.onload = function () {
         searchText = e.target.value.toLowerCase();
         renderFilm();
     }
+
+    await fakeDelay();
 
     renderFilm();
 }
